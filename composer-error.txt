@@ -1,0 +1,85 @@
+﻿composer : ./composer.json 
+has been updated
+At line:1 char:1
++ composer require php-open-
+source-saver/jwt-auth:2.8.3 
+-W 2>&1 | Out-F ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (./com  
+  poser.json has been upd   
+ ated:String) [], Remote    
+Exception
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+Running composer update php-
+open-source-saver/jwt-auth 
+--with-all-dependencies
+Loading composer 
+repositories with package 
+information
+Updating dependencies
+Your requirements could not 
+be resolved to an 
+installable set of packages.
+
+  Problem 1
+    - Root composer.json 
+requires php-open-source-sav
+er/jwt-auth 2.8.3 -> 
+satisfiable by php-open-sour
+ce-saver/jwt-auth[v2.8.3].
+    - lcobucci/jwt[5.4.0, 
+..., 5.6.1] require 
+ext-sodium * -> it is 
+missing from your system. 
+Install or enable PHP's 
+sodium extension.
+
+      Alternatively you can 
+require one of these 
+packages that provide the 
+extension (or parts of it):
+      Keep in mind that the 
+suggestions are automated 
+and may not be valid or 
+safe to use
+      - paragonie/sodium_com
+pat_ext_sodium
+      - juspay/expresschecko
+ut-php-sdk Express Checkout 
+SDK for PHP allows easy 
+integration with Juspay's 
+EC payments as a service 
+platform
+      - vufind/vufind A 
+flexible discovery layer.
+
+    - php-open-source-saver/
+jwt-auth v2.8.3 requires 
+lcobucci/jwt ^5.4 -> 
+satisfiable by 
+lcobucci/jwt[5.4.0, ..., 
+5.6.1].
+
+To enable extensions, 
+verify that they are 
+enabled in your .ini files:
+    - C:\xampp\php\php.ini
+You can also run `php 
+--ini` in a terminal to see 
+which files are used by PHP 
+in CLI mode.
+Alternatively, you can run 
+Composer with `--ignore-plat
+form-req=ext-sodium` to 
+temporarily ignore these 
+required extensions.
+
+Installation failed, 
+reverting ./composer.json 
+and ./composer.lock to 
+their original content.
