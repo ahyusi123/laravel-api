@@ -1,12 +1,14 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
 
-Route::get('/ping', fn () => (new class {
-    use \App\Traits\ApiResponses;
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:sanctum');
 
-    public function run()
-    {
-        return $this->ok('API is working');
-    }
-})->run());
+// TEMPORARY: delete in Step 7.
+Route::get('/products', function () {
+    return Product::all();
+});
