@@ -27,6 +27,12 @@ class UserResource extends JsonResource
                     'updatedAt' => $this->updated_at,
                 ]),
             ],
+
+            'included' => ProductResource::collection($this->whenLoaded('products')),
+
+            'links' => [
+                'self' => route('authors.show', ['author' => $this->id]),
+            ],
         ];
     }
 }
