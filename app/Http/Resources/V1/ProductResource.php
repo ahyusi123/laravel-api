@@ -19,11 +19,17 @@ class ProductResource extends JsonResource
             'id' => $this->id,
 
             'attributes' => [
-                'name' => $this->name,
-                'description' => $this->description,
-                'price' => $this->price,
+                
+                'description' => $this->when(
+                    ! $request->routeIs(['products.index', 'users.products.index']),
+                    $this->description
+                ),
+                'status' => $this->status,
                 'created_at' => $this->created_at,
                 'updated_at' => $this->updated_at,
+
+                      'type' => 'user',
+                      'id'=> $this->user_id,
             ],
 
             'relationships' => [
@@ -36,8 +42,10 @@ class ProductResource extends JsonResource
             ],
 
             'links' => [
-                'self' => route('products.show', ['product' => $this->id]),
+                'self' => route('authors.show', ['author' => $this->user_id]),
             ],
+
+            //Link to this product
         ];
     }
 }
